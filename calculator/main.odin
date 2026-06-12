@@ -21,7 +21,7 @@ main :: proc() {
 
 	fmt.print("Enter the second number: ")
 	n2, _ := os.read(os.stdin, buf[:])
-	num2 := strings.trim_right(string(buf[:n]), "\r\n")
+	num2 := strings.trim_right(string(buf[:n2]), "\r\n")
 
 	second_num, fine := strconv.parse_f64(num2)
 	if !fine {
@@ -38,7 +38,7 @@ main :: proc() {
 		fmt.println("5. Quit the program")
 		fmt.print(": ")
 		o, _ := os.read(os.stdin, buf[:])
-		operation := strings.trim_right(string(buf[:n]), "\r\n")
+		operation := strings.trim_right(string(buf[:o]), "\r\n")
 
 		switch operation {
 		case "1":
