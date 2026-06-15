@@ -22,13 +22,10 @@ main :: proc() {
 			continue
 		}
 
-		for num != random_num {
-			if num > random_num {
-				fmt.println("too high")
-			} else if num < random_num {
-				fmt.println("too low")
-			}
-			break
+		if num > random_num {
+			fmt.println("too high")
+		} else if num < random_num {
+			fmt.println("too low")
 		}
 
 		if num == random_num {
