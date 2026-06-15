@@ -58,6 +58,7 @@ main :: proc() {
 add_task :: proc(list: ^TodoList, title: string) -> string {
 	if list.count >= MAX_TODOS {return "Limit for tasks exceeded"}
 	list.items[list.count].title = title
+	list.count += 1
 
 	return list.items[list.count].title
 }
